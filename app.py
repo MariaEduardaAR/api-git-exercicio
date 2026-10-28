@@ -8,5 +8,9 @@ VERSION = "1.0.0"
 def health():
     return {"status": "ok"}
 
+@app.get("/version")
+def version():
+    return VERSION
+
 if __name__ == "__main__":
     app.run(port=5000)
